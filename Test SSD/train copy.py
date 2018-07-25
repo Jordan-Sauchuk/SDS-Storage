@@ -25,7 +25,7 @@ parser.add_argument('--basenet', default='vgg16_reducedfc.pth', help='pretrained
 parser.add_argument('--jaccard_threshold', default=0.5, type=float, help='Min Jaccard index for matching')
 parser.add_argument('--batch_size', default=16, type=int, help='Batch size for training')
 parser.add_argument('--resume', default=None, type=str, help='Resume from checkpoint')
-parser.add_argument('--num_workers', default=2, type=int, help='Number of workers used in dataloading')
+parser.add_argument('--num_workers', default=0, type=int, help='Number of workers used in dataloading')
 parser.add_argument('--iterations', default=120000, type=int, help='Number of training iterations')
 parser.add_argument('--start_iter', default=0, type=int, help='Begin counting iterations starting from this value (should be used with resume)')
 parser.add_argument('--cuda', default=True, type=str2bool, help='Use cuda to train model')
@@ -49,6 +49,8 @@ cfg = (v1, v2)[args.version == 'v2']
 
 if not os.path.exists(args.save_folder):
     os.mkdir(args.save_folder)
+
+if __name__ == '__main__':
 
 train_sets = [('2007', 'trainval'), ('2012', 'trainval')]
 # train_sets = 'train'
@@ -146,7 +148,7 @@ def train():
             )
         )
     batch_iterator = None
-    data_loader = data.DataLoader(dataset, batch_size, num_workers=args.num_workers,
+    data_loader = data.DataLoader(dataset, batch_size, num_workers=0,
                                   shuffle=True, collate_fn=detection_collate, pin_memory=True)
     for iteration in range(args.start_iter, max_iter):
         if (not batch_iterator) or (iteration % epoch_size == 0):
