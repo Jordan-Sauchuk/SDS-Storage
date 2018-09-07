@@ -1,0 +1,57 @@
+name: virtual_env
+channels:
+  - defaults
+dependencies:
+  - blas=1.0=openblas
+  - ca-certificates=2018.03.07=0
+  - certifi=2018.8.24=py27_1
+  - cffi=1.11.5=py27he75722e_1
+  - cudatoolkit=8.0=3
+  - cudnn=6.0.21=cuda8.0_0
+  - freetype=2.5.5=2
+  - intel-openmp=2018.0.3=0
+  - jpeg=8d=2
+  - lcms=1.19=0
+  - libedit=3.1.20170329=h6b74fdf_2
+  - libffi=3.2.1=hd88cf55_4
+  - libgcc=7.2.0=h69d50b8_2
+  - libgcc-ng=8.2.0=hdf63c60_1
+  - libgfortran=3.0.0=1
+  - libgfortran-ng=7.3.0=hdf63c60_0
+  - libopenblas=0.3.2=h5a2b251_1
+  - libpng=1.6.34=hb9fc6fc_0
+  - libstdcxx-ng=8.2.0=hdf63c60_1
+  - libtorch=0.1.12=nomkl_0
+  - mkl=2017.0.4=h4c4d0af_0
+  - nccl=1.3.4=cuda8.0_1
+  - ncurses=6.1=hf484d3e_0
+  - numpy=1.15.1=py27hb510916_0
+  - numpy-base=1.15.1=py27h74e8950_0
+  - openblas=0.2.19=0
+  - openssl=1.0.2p=h14c3975_0
+  - pil=1.1.7=py27_2
+  - pip=10.0.1=py27_0
+  - pycparser=2.18=py27_1
+  - python=2.7.15=h1571d57_0
+  - readline=7.0=h7b6447c_5
+  - scipy=1.1.0=py27h9b217d5_1
+  - setuptools=40.2.0=py27_0
+  - sqlite=3.24.0=h84994c4_0
+  - tk=8.6.8=hbc83047_0
+  - wheel=0.31.1=py27_0
+  - zlib=1.2.11=ha838bed_2
+  - pip:
+    - chardet==3.0.4
+    - doom-py==0.0.15
+    - future==0.16.0
+    - gym==0.9.3
+    - idna==2.7
+    - ppaquette-gym-doom==0.0.6
+    - pyglet==1.3.2
+    - pyyaml==3.13
+    - requests==2.19.1
+    - six==1.11.0
+    - torch==0.1.6.post17
+    - urllib3==1.23
+prefix: /home/js/anaconda3/envs/virtual_env
+
