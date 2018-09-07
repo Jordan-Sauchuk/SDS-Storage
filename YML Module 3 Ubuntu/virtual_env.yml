@@ -53,5 +53,5 @@ dependencies:
     - six==1.11.0
     - torch==0.1.6.post17
     - urllib3==1.23
-prefix: /home/js/anaconda3/envs/virtual_env
+
 
